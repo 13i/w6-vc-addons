@@ -1,0 +1,8 @@
+{
+    "editor.insertSpaces": false,
+    "phpcbf.executablePath": "/home/pierre/Documents/Projets/w6-wp-seo/vendor/bin/phpcbf",
+    "phpcbf.onsave": true,
+    "phpcbf.standard": "WordPress",
+    "phpcs.standard": "WordPress",
+    "phpcs.executablePath": "/usr/bin/phpcs"
+}

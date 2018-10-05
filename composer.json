@@ -1,0 +1,34 @@
+{
+  "name": "w6/wp-vc-addons",
+  "description": "Visual Composer Addons",
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "keywords": ["wordpress", "wordpress-plugin", "visual-composer"],
+  "homepage": "https://web6.fr",
+  "readme": "README.md",
+  "license": "GPL-3.0-only",
+  "authors": [
+      {
+          "name": "WEB6",
+          "email": "contact@web6.fr",
+          "homepage": "https://web6.fr",
+          "role": "Developer"
+      }
+  ],
+  "support": {
+      "issues": "https://github.com/web6-fr/w6-vc-addons/issues",
+      "docs": "https://github.com/web6-fr/w6-vc-addons/wiki"
+  },
+  "require": {
+      "php": ">=5.4"
+  },
+  "require-dev": {
+      "wp-coding-standards/wpcs": "^1.0"
+  },
+  "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://github.com/web6-fr/w6-vc-addons"
+      }
+  ]
+}
