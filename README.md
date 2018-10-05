@@ -1,6 +1,6 @@
-# w6-wp-seo
-Seo plugin for Wordpress
+# WEB6 Visual Composer Addons
 
+Useful addons for Visual Composer
 
 ## Development
 
@@ -15,7 +15,7 @@ IDE : Visual Studio Code
 #### Clone project
 
 ```bash
-$ git clone https://github.com/web6-fr/w6-wp-seo.git
+$ git clone https://github.com/web6-fr/w6-vc-addons.git
 ```
 
 #### Open Folder in VS Code
@@ -38,5 +38,3 @@ $ vendor/bin/phpcs --config-set installed_paths ./vendor/wp-coding-standards/wpc
 ```
 
 ## Todo
-
-- Create a character counter for the fields

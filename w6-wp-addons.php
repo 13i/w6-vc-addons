@@ -3,7 +3,7 @@
  * Visual Composer Addons
  *
  * Useful addons for Visual Composer :
- * - Before & After with spots
+ * - Before & After with hotspots
  *
  * @package   w6\vc_addons
  * @since     1.0.0
@@ -38,6 +38,16 @@ define( 'W6\Vc_Addons\VERSION', '1.0.0' );
  * Plugin root folder.
  */
 define( 'W6\Vc_Addons\ROOT', dirname( __FILE__ ) );
+
+/**
+ * Plugin root url.
+ */
+define( 'W6\Vc_Addons\URL', plugin_dir_url( __FILE__ ) );
+
+/**
+ * Elements folder.
+ */
+define( 'W6\Vc_Addons\ELEMENTS', dirname( __FILE__ ) . '/elements' );
 
 /**
  * Functions

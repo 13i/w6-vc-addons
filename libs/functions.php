@@ -24,7 +24,20 @@ function autoload( $class_name ) {
 	}
 
 	$parts = explode( '\\', $class_name );
-	$parts = array_filter($parts);
+	$parts = array_filter( $parts );
+
+	// Special rule for elements.
+	if ( 'Elements' === $parts[2] && 4 === count( $parts ) ) {
+		$folder_name = array_pop( $parts );
+		$basename    = str_replace( '_', '-', $folder_name );
+		$basename    = strtolower( $basename );
+
+		$path = ELEMENTS . '/' . $folder_name . '/class-' . $basename . '.php';
+		if ( file_exists( $path ) ) {
+			require_once $path;
+		}
+		return;
+	}
 
 	$basename = array_pop( $parts );
 	$basename = str_replace( '_', '-', $basename );
