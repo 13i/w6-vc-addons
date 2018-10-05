@@ -3,6 +3,7 @@
  * Before & After Hotspots
  *
  * Creates a before & after image comparator and add hotspots on each image
+ * Code mainly copied from https://codyhouse.co/gem/css-jquery-image-comparison-slider/
  *
  * @package   W6\Vc_Addons
  * @author    WEB6 <contact@web6.fr>

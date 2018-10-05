@@ -73,6 +73,13 @@ abstract class Element extends \WPBakeryShortCode {
 	public $url;
 
 	/**
+	 * Icon
+	 *
+	 * @var string
+	 */
+	public $icon;
+
+	/**
 	 * Class constructor
 	 *
 	 * @return void
@@ -87,7 +94,7 @@ abstract class Element extends \WPBakeryShortCode {
 		$this->path = \W6\Vc_Addons\ELEMENTS . '/' . $this->ref;
 
 		// Set URL.
-		$this->url = \W6\Vc_Addons\URL . 'elements/' . $this->ref;
+		$this->url = \W6\Vc_Addons\URL . '/elements/' . $this->ref;
 
 		// Set name.
 		$this->set_name();
@@ -100,6 +107,9 @@ abstract class Element extends \WPBakeryShortCode {
 
 		// Set admin & front assets.
 		$this->set_assets();
+
+		// Set icon.
+		$this->set_icon();
 
 		// Map params.
 		add_action( 'init', array( $this, 'map' ) );
@@ -132,6 +142,21 @@ abstract class Element extends \WPBakeryShortCode {
 	 * @return void
 	 */
 	protected function set_params() {}
+
+	/**
+	 * Sets the icon automatically
+	 *
+	 * Will search for a file name icon.png in the elements' directory.
+	 *
+	 * @return void
+	 */
+	protected function set_icon() {
+		if ( file_exists( $this->path . '/icon.png' ) ) {
+			$this->icon = $this->url . '/icon.png';
+		} else {
+			$this->icon = \W6\Vc_Addons\URL . '/icon.png';
+		}
+	}
 
 	/**
 	 * Sets admin & front CSS & JS automatically
@@ -172,7 +197,7 @@ abstract class Element extends \WPBakeryShortCode {
 			'base'        => $this->ref,
 			'description' => $this->description,
 			'category'    => $this->category,
-			'icon'        => get_stylesheet_directory_uri() . '/vc-icon.png',
+			'icon'        => $this->icon,
 		);
 		if ( ! empty( $this->params ) ) {
 			$conf['params'] = $this->params;
