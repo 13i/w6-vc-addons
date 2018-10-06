@@ -1,0 +1,27 @@
+{
+  "name": "w6-vc-addons",
+  "version": "1.0.0",
+  "description": "Visual Composer Addons",
+  "author": {
+    "name": "WEB6",
+    "email": "contact@web6.fr",
+    "url": "https://web6.fr"
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web6-fr/w6-vc-addons.git"
+  },
+  "homepage": "https://github.com/web6-fr/w6-vc-addons#readme",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "cssnano": "*",
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "load-grunt-config": "*",
+    "load-grunt-tasks": "*",
+    "node-sass": "*",
+    "grunt-sass": "*",
+    "grunt-postcss": "*"
+  }
+}

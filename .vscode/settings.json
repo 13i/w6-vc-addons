@@ -18,5 +18,14 @@
             "spaceBefore": 1,
             "spaceAfter": 1
         }
-    }
+    },
+	"editor.detectIndentation": false,
+	"beautify.config": {
+		"end_with_newline": true,
+		"indent_with_tabs": true,
+		"brace_style": "end-expand",
+		"max_preserve_newlines": 2,
+		"wrap_line_length": 0,
+		"newline_between_rules": true
+	}
 }
