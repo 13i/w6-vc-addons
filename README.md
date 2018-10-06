@@ -38,3 +38,6 @@ $ vendor/bin/phpcs --config-set installed_paths ./vendor/wp-coding-standards/wpc
 ```
 
 ## Todo
+
+- Add a Grunt task to compress images
+- Add a Grunt task to manage js files : Concatenation & Minification

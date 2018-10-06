@@ -146,13 +146,13 @@ abstract class Element extends \WPBakeryShortCode {
 	/**
 	 * Sets the icon automatically
 	 *
-	 * Will search for a file name icon.png in the elements' directory.
+	 * Will search for a file name assets/img/icon.png in the elements' directory.
 	 *
 	 * @return void
 	 */
 	protected function set_icon() {
-		if ( file_exists( $this->path . '/icon.png' ) ) {
-			$this->icon = $this->url . '/icon.png';
+		if ( file_exists( $this->path . '/assets/img/icon.png' ) ) {
+			$this->icon = $this->url . '/assets/img/icon.png';
 		} else {
 			$this->icon = \W6\Vc_Addons\URL . '/icon.png';
 		}
@@ -162,27 +162,29 @@ abstract class Element extends \WPBakeryShortCode {
 	 * Sets admin & front CSS & JS automatically
 	 *
 	 * This methods searches the elements directory for specific files and adds them depending on the section visited :
-	 * - admin.css
-	 * - admin.js
-	 * - front.css
-	 * - front.js
+	 * - assets/css/admin.css & assets/js/admin.js
+	 * - assets/css/front.css & assets/js/front.js
+	 *
+	 * A grunt task is available to generate these files from sources located in :
+	 * - assets/src/scss/(admin|front).scss
+	 * - assets/src/js/(admin|front).js
 	 *
 	 * @return void
 	 */
 	protected function set_assets() {
 		$filename = is_admin() ? 'admin' : 'front';
 		$version  = \W6\Vc_Addons\VERSION;
-		if ( file_exists( $this->path . '/' . $filename . '.css' ) ) {
+		if ( file_exists( $this->path . '/assets/css/' . $filename . '.css' ) ) {
 			if ( WP_DEBUG ) {
-				$version = filemtime( $this->path . '/' . $filename . '.css' );
+				$version = filemtime( $this->path . '/assets/css/' . $filename . '.css' );
 			}
-			wp_enqueue_style( 'css-' . $this->ref, $this->url . '/' . $filename . '.css', array(), $version, 'all' );
+			wp_enqueue_style( 'css-' . $this->ref, $this->url . '/assets/css/' . $filename . '.css', array(), $version, 'all' );
 		}
-		if ( file_exists( $this->path . '/' . $filename . '.js' ) ) {
+		if ( file_exists( $this->path . '/assets/js/' . $filename . '.js' ) ) {
 			if ( WP_DEBUG ) {
-				$version = filemtime( $this->path . '/' . $filename . '.js' );
+				$version = filemtime( $this->path . '/assets/js/' . $filename . '.js' );
 			}
-			wp_enqueue_script( 'js-' . $this->ref, $this->url . '/' . $filename . '.js', array( 'jquery' ), $version, true );
+			wp_enqueue_script( 'js-' . $this->ref, $this->url . '/assets/js/' . $filename . '.js', array( 'jquery' ), $version, true );
 		}
 	}
 

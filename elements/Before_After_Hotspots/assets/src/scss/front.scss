@@ -10,7 +10,7 @@
 	margin: 0em auto;
 
 	img {
-		display: block;
+		display: block; 
 	}
 }
 
@@ -67,7 +67,7 @@
 	}
 }
 
-@include keyframes(cd-bounce-in) {
+@keyframes cd-bounce-in {
 	0% {
 		width: 0;
 	}
