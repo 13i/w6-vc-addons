@@ -42,7 +42,7 @@ define( 'W6\Vc_Addons\ROOT', dirname( __FILE__ ) );
 /**
  * Plugin root url.
  */
-define( 'W6\Vc_Addons\URL', ltrim( plugin_dir_url( __FILE__ ) ), '/' );
+define( 'W6\Vc_Addons\URL', ltrim( plugin_dir_url( __FILE__ ), '/' ) );
 
 /**
  * Elements folder.
