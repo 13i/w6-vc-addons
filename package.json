@@ -23,5 +23,9 @@
     "node-sass": "*",
     "grunt-sass": "*",
     "grunt-postcss": "*"
-  }
+  },
+  "browserslist": [
+    "ie >= 8",
+    "last 2 versions"
+  ]
 }
