@@ -3,10 +3,6 @@ module.exports = function(grunt, options) {
 		options: {
 			processors: [
 				require('autoprefixer')({
-					browsers: [
-						'ie >   = 8',
-						'last 2 versions'
-					],
 					cascade: false,
 					add: true,
 					remove: false

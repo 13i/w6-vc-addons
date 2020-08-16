@@ -112,7 +112,7 @@ abstract class Element extends \WPBakeryShortCode {
 		$this->set_icon();
 
 		// Map params.
-		add_action( 'init', array( $this, 'map' ) );
+		$this->map();
 
 		// Add shortcode.
 		add_shortcode( $this->ref, array( $this, 'out' ) );
